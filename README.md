@@ -1,25 +1,25 @@
 # I400_Team7
 minesweeper
-#Roles
+# Roles
 Document/Repo-Jacob De Haan
-#Class
+# Class
 Board-Jacob De Haan
-#Plan
-Week 1:
-Set up Repo
-Create Branches
-Build Architecture
+# Plan
+### Week 1:
+Set up Repo,
+Create Branches,
+Build Architecture,
 Map class Connections
-Week 2:
-Build Class
+### Week 2:
+Build Class,
 Introduce test functionality
 
-Week 3(Phase 1 Due):
+### Week 3(Phase 1 Due):
 
-Week 4:
+### Week 4:
 
-Week 5:
+### Week 5:
 
-Week 6:
+### Week 6:
 
-Week 7(Final Presentation):
+### Week 7(Final Presentation):
