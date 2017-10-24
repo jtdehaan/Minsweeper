@@ -2,7 +2,7 @@ package application;
 import javafx.fxml.FXMLLoader;	
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -24,7 +24,7 @@ public class Main extends Application {
 			//Matrix
 	        for (int i = 0; i < 10; i++) {
 	            for (int j = 0; j < 10; j++) {
-	                TextField text = new TextField(Integer.toString((int)(Math.random() * 2)));
+	                Button text = new Button(Integer.toString((int)(Math.random() * 2)));
 	                text.setMinWidth( 50.0);
 	                text.setMaxWidth( 50.0);
 	                text.setMinHeight(50.0);
