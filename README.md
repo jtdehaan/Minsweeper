@@ -28,3 +28,11 @@ End game logic functionality
 Edge case testing
 ### Week 7(Final Presentation):
 Vigorous logic testing - playing game, finding errors
+
+
+10.24.17
+
+-Create Classes -- HALFWAY
+-Determine method types -- HALFWAY
+-Build individual branches -- COMPLETE
+
