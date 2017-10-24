@@ -17,7 +17,13 @@ public class Board {
 		}
 	}
 	public void mark(cell a) {
-		
+		if(Cell.getMark(a)==true){
+			Cell.setMark(a)==false;
+			a.setText("");
+		} else{
+			Cell.setMark(a)==true;
+			a.setText("X");
+		}
 	}
 	public void unmask() {
 		for (int i = 0; i < 10; i++) {
