@@ -36,3 +36,8 @@ Vigorous logic testing - playing game, finding errors
 -Determine method types -- HALFWAY
 -Build individual branches -- COMPLETE
 
+10.26.17
+
+-Create classes- Done
+-Mapped COnnections -1/3
+-Determined methods-1/2
