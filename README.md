@@ -6,7 +6,7 @@ Tester-Qiaoyi Liu
 Architect-Alex Toradze
 # Class
 Board-Jacob De Haan
-GUI-Alex Toraddze
+GUI-Alex Toradze
 Cell-Qiaoyi Liu
 # Plan
 ### Week 1:
@@ -30,13 +30,13 @@ Edge case testing
 Vigorous logic testing - playing game, finding errors
 
 
-10.24.17
+# 10.24.17
 
 -Create Classes -- HALFWAY
 -Determine method types -- HALFWAY
 -Build individual branches -- COMPLETE
 
-10.26.17
+# 10.26.17
 
 -Create classes- Done
 -Mapped COnnections -1/3
