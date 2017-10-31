@@ -41,3 +41,9 @@ Vigorous logic testing - playing game, finding errors
 -Create classes- Done
 -Mapped COnnections -1/3
 -Determined methods-1/2
+
+# 10.31.17
+
+- Determine methods
+- Map connections
+- GUI Layering
