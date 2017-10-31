@@ -28,8 +28,8 @@ public class Main extends Application {
 		//	AnchorPane rootPane = new AnchorPane();
 			AnchorPane mainLayout = (AnchorPane) loader. load();
 			
-		    GridPane child = new GridPane();
-			mainLayout.getChildren().addAll(child);
+		//    GridPane child = new GridPane();
+		//	mainLayout.getChildren().addAll(child);
 			
 	//		child.setN
 			
@@ -45,7 +45,7 @@ public class Main extends Application {
 			mainLayout.add(myButton2, 1, 1);
 			*/
 			
-			
+			/*
 			for (int i = 0; i < 10; i++) {
 	            for (int j = 0; j < 10; j++) {
 	            	//Button cell = new Button(Integer.toString((int)(Math.random() * 2)));
@@ -55,10 +55,10 @@ public class Main extends Application {
 	                cell.setMinHeight(50.0);
 	                cell.setMaxHeight(50.0);
 	                child.add(cell, j, i);
-	                cell.setAlignment(Pos.CENTER);
+	                cell.setAlignment(Pos.);
 	            }
 	        }
-			 
+			*/
 			
 			/*
 			//Matrix
