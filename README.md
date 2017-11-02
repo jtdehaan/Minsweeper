@@ -44,6 +44,9 @@ Vigorous logic testing - playing game, finding errors
 
 # 10.31.17
 
-- Determine methods
-- Map connections
-- GUI Layering
+-Determine methods-1/2
+-Map connections-1/2
+-GUI Layering-Done
+# 11.2.17
+-Complete Pseudo code for Board- Done
+-Define methods for cell and GUI- Done
