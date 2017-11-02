@@ -5,15 +5,25 @@ public class Board {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-	}/*
-	public void reveal(cell a) {
+	}
+	/*
+	Cell test = new Cell();
+	
+	public void setup(){
+		int cellArray[][]={};
+		for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+            	cellArray[i][j]=test;
+            }}
+	}
+	public void reveal(int i, int j) {
 		//recursive
-		if(Cell.isMine(a)==true) {
-			GUI.end();
-		}else if(Cell.getCount(a)==0){
-			reveal(cells around);
+		if(Cell.isMine(cellArray[i][j])==true) {
+			return FAILURE;
+		}else if(Cell.getCount(cellArray[i][j])==0){
+			reveal(cells around\\);
 		}else {
-			a.setText(Cell.getCount());
+			a.setText(Cell.getCount(cellArray[i][j]));
 		}
 	}
 	public void mark(cell a) {
@@ -29,11 +39,22 @@ public class Board {
 		for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
             	if(cell.isMine(a)==true) {
-            		a.setText();
-            	}else if(cell.getCount(a)) {
-            		
+            		a.setText('');
+            	}else {
+            		a.setText(cell.getCount(a))
             	}
             }
 		}
-	}*/
-}
+	}
+	public void checkwin(){
+		for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+            if(Cell.ismine(cell+i+j)=true || Cell.isrevealed(cell+i+j)==true){
+            }else{
+            	return false;
+            }
+            }
+         }
+         return true;
+	}
+*/}
