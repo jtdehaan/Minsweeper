@@ -40,13 +40,15 @@ public class cell {
         this.mine = b;
     }
 
-    public boolean isMarked() {
+    public boolean getMark() {
         return this.mark;
     }
 
     public boolean isCovered() {
         return this.cover;
     }
+    
+    
 
     public boolean isChecked() {
         return this.checked;
@@ -70,5 +72,17 @@ public class cell {
 
     public int getAroundMines() {
         return this.value;
+    }
+    
+    public String returnV(){
+    	if (isMine() == true) {
+    		return "B";
+    	}
+    	else if (getAroundMines() == 0) {
+    		return " ";
+    	}
+    	else {
+    		return Integer.toString(getAroundMines());
+    	}
     }
 }
