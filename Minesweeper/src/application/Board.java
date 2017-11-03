@@ -6,54 +6,52 @@ public class Board {
 		// TODO Auto-generated method stub
 
 	}
-	/*
-	Cell test = new Cell();
 	
+	cell test = new cell();
+	 
 	public void setup(){
-		int cellArray[][]={};
+		cell cellArray[][]={};
 		for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
             	cellArray[i][j]=test;
             }}
 	}
-	public void reveal(int i, int j) {
+	/*
+	public String reveal(int i, int j) {
 		//recursive
-		if(Cell.isMine(cellArray[i][j])==true) {
-			return FAILURE;
-		}else if(Cell.getCount(cellArray[i][j])==0){
-			reveal(cells around\\);
-		}else {
-			a.setText(Cell.getCount(cellArray[i][j]));
+		if (cellArray[i][j].isCovered()==true){
+			cellArray[i][j].uncover();
 		}
+		String out=cellArray[i][j].returnV();
+		return out;
 	}
-	public void mark(cell a) {
-		if(Cell.getMark(a)==true){
-			Cell.setMark(a)==false;
-			a.setText("");
+		
+	public String mark(int i, int j) {
+		if(cellArray[i][j].getMark()==true){
+			cellArray[i][j].setMark()==false;
+			return "x";
 		} else{
-			Cell.setMark(a)==true;
-			a.setText("X");
+			cellArray[i][j].setMark(a)==true;
+			return "?";
 		}
 	}
+	
 	public void unmask() {
 		for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-            	if(cell.isMine(a)==true) {
-            		a.setText('');
-            	}else {
-            		a.setText(cell.getCount(a))
-            	}
+            	cellArray[i][j].returnV();
+            	
             }
 		}
 	}
+	
 	public void checkwin(){
 		for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-            if(Cell.ismine(cell+i+j)=true || Cell.isrevealed(cell+i+j)==true){
+            if(cellArray[i][j].isMine()==true || cellArray[i][j].isCovered()==true){
             }else{
             	return false;
-            }
-            }
+            }}
          }
          return true;
 	}
