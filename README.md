@@ -50,3 +50,5 @@ Vigorous logic testing - playing game, finding errors
 # 11.2.17
 -Complete Pseudo code for Board- Done
 -Define methods for cell and GUI- Done
+# 11.3.17
+-Complete connections between Cell and Board classes-Done
