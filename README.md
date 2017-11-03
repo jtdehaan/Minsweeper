@@ -41,3 +41,12 @@ Vigorous logic testing - playing game, finding errors
 -Create classes- Done
 -Mapped COnnections -1/3
 -Determined methods-1/2
+
+# 10.31.17
+
+-Determine methods-1/2
+-Map connections-1/2
+-GUI Layering-Done
+# 11.2.17
+-Complete Pseudo code for Board- Done
+-Define methods for cell and GUI- Done
