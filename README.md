@@ -6,7 +6,7 @@ Tester-Qiaoyi Liu
 Architect-Alex Toradze
 # Class
 Board-Jacob De Haan
-GUI-Alex Toraddze
+GUI-Alex Toradze
 Cell-Qiaoyi Liu
 # Plan
 ### Week 1:
@@ -28,3 +28,25 @@ End game logic functionality
 Edge case testing
 ### Week 7(Final Presentation):
 Vigorous logic testing - playing game, finding errors
+
+
+# 10.24.17
+
+-Create Classes -- HALFWAY
+-Determine method types -- HALFWAY
+-Build individual branches -- COMPLETE
+
+# 10.26.17
+
+-Create classes- Done
+-Mapped COnnections -1/3
+-Determined methods-1/2
+
+# 10.31.17
+
+-Determine methods-1/2
+-Map connections-1/2
+-GUI Layering-Done
+# 11.2.17
+-Complete Pseudo code for Board- Done
+-Define methods for cell and GUI- Done
