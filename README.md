@@ -52,3 +52,6 @@ Vigorous logic testing - playing game, finding errors
 -Define methods for cell and GUI- Done
 # 11.3.17
 -Complete connections between Cell and Board classes-Done
+# 11.7.17
+-connect Board and GUi classes- Not Done 
+-Finish creation class-done
