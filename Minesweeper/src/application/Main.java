@@ -28,8 +28,10 @@ public class Main extends Application {
 		//	AnchorPane rootPane = new AnchorPane();
 			AnchorPane mainLayout = (AnchorPane) loader. load();
 			
-		//    GridPane child = new GridPane();
-		//	mainLayout.getChildren().addAll(child);
+		    GridPane child = new GridPane();
+		 	mainLayout.getChildren().addAll(child);
+		 	child.setTranslateX(50);
+		 	child.setTranslateY(120);
 			
 	//		child.setN
 			
@@ -45,20 +47,22 @@ public class Main extends Application {
 			mainLayout.add(myButton2, 1, 1);
 			*/
 			
-			/*
+			
 			for (int i = 0; i < 10; i++) {
 	            for (int j = 0; j < 10; j++) {
 	            	//Button cell = new Button(Integer.toString((int)(Math.random() * 2)));
 	            	Button cell = new Button();
-	             	cell.setMinWidth(50.0);
-	                cell.setMaxWidth(50.0);
-	                cell.setMinHeight(50.0);
-	                cell.setMaxHeight(50.0);
+	             	cell.setMinWidth(40.0);
+	                cell.setMaxWidth(40.0);
+	                cell.setMinHeight(40.0);
+	                cell.setMaxHeight(40.0);
 	                child.add(cell, j, i);
-	                cell.setAlignment(Pos.);
+	                cell.setAlignment(Pos.CENTER);
+	                cell.setOnMouseClicked(e -> cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;"));
+	                
 	            }
 	        }
-			*/
+			
 			
 			/*
 			//Matrix
