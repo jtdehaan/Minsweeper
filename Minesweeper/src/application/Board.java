@@ -28,8 +28,8 @@ public class Board {
 		//creates  mines
 		for(int i =0;i<10;i++) {
 			int x,y;
-			x=ThreadLocalRandom.current().nextInt(0, 10 + 1);
-			y=ThreadLocalRandom.current().nextInt(0, 10 + 1);
+			x=ThreadLocalRandom.current().nextInt(0, 9 + 1);
+			y=ThreadLocalRandom.current().nextInt(0, 9 + 1);
 			if(cellArray[x][y].isMine()==true) {
 				i--;
 			}else {
@@ -46,6 +46,7 @@ public class Board {
 			}
 		}
 	}
+	
 	//reveals the cell
 	public void reveal(int i, int j) {
 		//recursive
@@ -91,7 +92,7 @@ public class Board {
 	public void checkWin(){
 		for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-            if(cellArray[i][j].isMine()==true || cellArray[i][j].isCovered()==true){
+            if(cellArray[i][j].isMine()==true || cellArray[i][j].isCovered()==false){
             }else{
             	win =false;
             }}

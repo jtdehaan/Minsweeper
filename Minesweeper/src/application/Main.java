@@ -13,7 +13,9 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	
-	 
+	Board board= new Board();
+	int rowIndex = 0;
+ 	int columnIndex = 0;
     private static final String GridPane = null;
 
 	@Override
@@ -46,7 +48,10 @@ public class Main extends Application {
 			myButton2.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 			mainLayout.add(myButton2, 1, 1);
 			*/
-			
+		 	
+		 	
+		 	
+			board.setup();
 			
 			for (int i = 0; i < 10; i++) {
 	            for (int j = 0; j < 10; j++) {
@@ -58,10 +63,19 @@ public class Main extends Application {
 	                cell.setMaxHeight(40.0);
 	                child.add(cell, j, i);
 	                cell.setAlignment(Pos.CENTER);
-	                cell.setOnMouseClicked(e -> cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;"));
+	                cell.setOnMouseClicked(e -> {
+	                //cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
+	                rowIndex = child.getRowIndex(cell);;
+	                columnIndex = child.getColumnIndex(cell);;
+	                });
+	                
+	                
+	                
 	                
 	            }
 	        }
+			
+			
 			
 			
 			/*
