@@ -16,7 +16,8 @@ public class Main extends Application {
 	Board board= new Board();
 	int rowIndex = 0;
  	int columnIndex = 0;
-    private static final String GridPane = null;
+    //private static final String GridPane = null;
+ 	
 
 	@Override
     public void start(Stage primaryStage) {
@@ -50,12 +51,13 @@ public class Main extends Application {
 			*/
 		 	
 		 	
-		 	
-			board.setup();
+		 	board.setup();
+			
 			
 			for (int i = 0; i < 10; i++) {
 	            for (int j = 0; j < 10; j++) {
 	            	//Button cell = new Button(Integer.toString((int)(Math.random() * 2)));
+	            	
 	            	Button cell = new Button();
 	             	cell.setMinWidth(40.0);
 	                cell.setMaxWidth(40.0);
@@ -67,15 +69,16 @@ public class Main extends Application {
 	                //cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
 	                rowIndex = child.getRowIndex(cell);;
 	                columnIndex = child.getColumnIndex(cell);;
+	                board.reveal(rowIndex, columnIndex);
 	                });
-	                
-	                
-	                
-	                
 	            }
 	        }
 			
-			
+			if (board.win = true) {
+				System.out.println("You Win");
+			}else {
+				System.out.println("Game Over");
+			}
 			
 			
 			/*

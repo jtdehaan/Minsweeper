@@ -15,15 +15,18 @@ public class Board {
 	public boolean loss() {
 		return loss;
 	}
+	
 	//creates array
 	cell[][] cellArray= new cell[10][10];
 	cell test = new cell();
-	//setsup cellArray
+	
+	//sets up cellArray
 	public void setup(){
 		cell cellArray[][]={};
 		for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
             	cellArray[i][j]=test;
+            	//cellArray[i][j] = new cell(i, j, false);
             }}
 		//creates  mines
 		for(int i =0;i<10;i++) {

@@ -6,14 +6,39 @@ public class cell {
     private boolean mark;
     private boolean cover;
     private boolean checked;
+    
+    private int rowPosition;
+    private int columnPosition;
 
     private int value;
 
+    /*
+    public cell(int x, int y, boolean mine) {
+    	
+    	this.rowPosition = x;
+    	this.columnPosition = y;
+        this.cover = true;
+        this.mark  = false;
+        this.mine  = mine;
+        this.value = 0;
+    }
+    */
+    
+    
     public cell() {
         this.cover = true;
         this.mark  = false;
         this.mine  = false;
         this.value = 0;
+    }
+    
+    
+    public int getRowPosition() {
+    	return rowPosition;
+    }
+    
+    public int getColumnPosition() {
+    	return columnPosition;
     }
 
     public int getValue() {
