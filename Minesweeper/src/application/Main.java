@@ -68,6 +68,7 @@ public class Main extends Application {
 	                child.add(cell, j, i);
 	                cell.setAlignment(Pos.CENTER);
 	                cell.setOnMouseClicked(e -> {
+	                //create an accessor method or set style in reveal method
 	                cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
 	                rowIndex = child.getRowIndex(cell);
 	                columnIndex = child.getColumnIndex(cell);
