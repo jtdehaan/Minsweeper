@@ -50,9 +50,8 @@ public class Main extends Application {
 			mainLayout.add(myButton2, 1, 1);
 			*/
 		 	
-		 	
+		 	//error at board.setup();
 		 	board.setup();
-			
 			
 			for (int i = 0; i < 10; i++) {
 	            for (int j = 0; j < 10; j++) {
