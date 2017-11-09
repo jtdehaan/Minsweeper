@@ -3,6 +3,8 @@ package application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -54,7 +56,7 @@ public class Main extends Application {
 			*/
 		 	
 		 	//error at board.setup();
-		 //	board.setup();
+		    board.setup();
 		 	
 		 	//Generate Buttons and set action on button click
 			
@@ -66,26 +68,103 @@ public class Main extends Application {
 	                cell.setMaxWidth(40.0);
 	                cell.setMinHeight(40.0);
 	                cell.setMaxHeight(40.0);
+	                cell.setId(j + " " + i);
 	                child.add(cell, j, i);
 	                cell.setAlignment(Pos.CENTER);
+	                
 	                cell.setOnMouseClicked(e -> {
 	                //create an accessor method or set style in reveal method
-	                cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
+	                //cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
 	                rowIndex = child.getRowIndex(cell);
 	                columnIndex = child.getColumnIndex(cell);
-	                //board.reveal(rowIndex, columnIndex);
+	                board.reveal(rowIndex, columnIndex);
+	                String a = board.state[rowIndex][columnIndex];
+	                //System.out.println(a);
+	                
+	                // loop through all strings in the state 2d array
+	                for (rowIndex = 0; rowIndex < board.state.length; rowIndex++) {
+	                	for (columnIndex = 0; columnIndex < board.state[rowIndex].length; columnIndex++) {
+	                		// get the list of nodes from the gridpane
+	                		ObservableList<Node> buttons = child.getChildren();
+	                		// loop through all the nodes
+	                		for(Node b : buttons){
+	                			// get the row and col for a node
+	                			int row = child.getRowIndex(b);
+	                			int col = child.getColumnIndex(b);
+	                			
+	                			// get the string for the node from state by row and col
+	                			String state = board.state[row][col];
+	                			// convert the node to button
+	                			Button button = (Button)b;
+	                			// set button text to corresponding state
+	                			button.setText(state);
+	                		}
+	                	}
+	                }
+	                
+	                /*
+	                for (rowIndex = 0; rowIndex < board.state.length; rowIndex++) {
+	                	for (columnIndex = 0; columnIndex < board.state[rowIndex].length; columnIndex++) {
+	                	//for (int j = 0; j < 10; j++) {
+	                	//cell.setText(a);
+
+	                		//String val = board.state[rowIndex][columnIndex];
+	                	//	a = board.state[rowIndex][columnIndex];
+	                		Button b1 = (Button) loader.getNamespace().get(columnIndex + " " + rowIndex);
+	                		
+	                		//Button b1 = cell.getId();
+	                		//Button b1 = new Button();
+	                		//b1.setId(cell.getId());
+	                		//cell.getId();
+	                		b1.setText(a);
+	                		//cell = (Button) loader.getNamespace().get(columnIndex+ " "+ rowIndex);
+	                		//cell.setText(val);
+	                		//cellButton = b1;
+	                	}
+	                }
+	                */
+	                
+	                //cell = b1;
+	                //cell.setText(a);
+	            	//cellButton.setText(a);
+	                System.out.println(a);
+	                if (a == "B"){
+	    				System.out.println("Game Over");
+	    			}
 	                });
 	                cellButton = cell;
+	                String a = board.state[i][j];
+	                cell.setText(a);
+	            	cellButton.setText(a);
 	            }
 	        }
 			
+			
+			/*
+			cellButton.setOnMouseClicked(e -> {
+				board.reveal(rowIndex, columnIndex);
+			});
+			*/
+			
+			/*
+			for (int i = 0; i < 10; i++) {
+	            for (int j = 0; j < 10; j++) {
+	            //	String rowAsString = Integer.toString(i);
+	            //	String columnAsString = Integer.toString(j);
+	            	String a = board.state[i][j];
+	            	cellButton.setText(a);
+	            }
+			}
+			*/
+
+			/*
 			//Print out Board status based on whether or not the game has been won or not
-			if (board.win = true) {
+			if (board.win == true) {
 				System.out.println("You Win");
-			}else {
+			}else if (a = "B"){
 				System.out.println("Game Over");
 			}
-			
+			*/
 			
 			/*
 			//Matrix
