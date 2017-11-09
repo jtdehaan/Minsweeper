@@ -66,9 +66,9 @@ public class Main extends Application {
 	                cell.setAlignment(Pos.CENTER);
 	                cell.setOnMouseClicked(e -> {
 	                //cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
-	                rowIndex = child.getRowIndex(cell);;
-	                columnIndex = child.getColumnIndex(cell);;
-	                board.reveal(rowIndex, columnIndex);
+	                rowIndex = child.getRowIndex(cell);
+	                columnIndex = child.getColumnIndex(cell);
+	                //board.reveal(rowIndex, columnIndex);
 	                });
 	            }
 	        }
