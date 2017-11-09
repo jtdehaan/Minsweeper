@@ -1,3 +1,4 @@
+
 package application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -14,6 +15,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	
 	Board board= new Board();
+	Button cellButton = new Button();
 	int rowIndex = 0;
  	int columnIndex = 0;
     //private static final String GridPane = null;
@@ -31,6 +33,7 @@ public class Main extends Application {
 		//	AnchorPane rootPane = new AnchorPane();
 			AnchorPane mainLayout = (AnchorPane) loader. load();
 			
+			//Hard-code in a gridpane
 		    GridPane child = new GridPane();
 		 	mainLayout.getChildren().addAll(child);
 		 	child.setTranslateX(50);
@@ -51,12 +54,13 @@ public class Main extends Application {
 			*/
 		 	
 		 	//error at board.setup();
-		 	board.setup();
+		 //	board.setup();
+		 	
+		 	//Generate Buttons and set action on button click
 			
 			for (int i = 0; i < 10; i++) {
 	            for (int j = 0; j < 10; j++) {
 	            	//Button cell = new Button(Integer.toString((int)(Math.random() * 2)));
-	            	
 	            	Button cell = new Button();
 	             	cell.setMinWidth(40.0);
 	                cell.setMaxWidth(40.0);
@@ -65,14 +69,17 @@ public class Main extends Application {
 	                child.add(cell, j, i);
 	                cell.setAlignment(Pos.CENTER);
 	                cell.setOnMouseClicked(e -> {
-	                //cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
+	                //create an accessor method or set style in reveal method
+	                cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
 	                rowIndex = child.getRowIndex(cell);
 	                columnIndex = child.getColumnIndex(cell);
 	                //board.reveal(rowIndex, columnIndex);
 	                });
+	                cellButton = cell;
 	            }
 	        }
 			
+			//Print out Board status based on whether or not the game has been won or not
 			if (board.win = true) {
 				System.out.println("You Win");
 			}else {

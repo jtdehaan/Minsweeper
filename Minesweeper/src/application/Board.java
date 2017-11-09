@@ -1,3 +1,4 @@
+
 package application;
 import java.util.concurrent.ThreadLocalRandom;
 public class Board {
@@ -190,3 +191,4 @@ public class Board {
          win =true;
 	}
 }
+

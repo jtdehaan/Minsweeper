@@ -24,22 +24,23 @@ import java.util.Scanner;
 
 public class matrixTenController {
 	// Variable Declarations for Labels and Buttons
-	private Label commandLabel;
+	private Label titleLabel;
 	@FXML
-	private Label logLabel;
+	private Label minesLabel;
 	@FXML
-	private TextField commandTexField;
+	private Label revealLabel;
 	@FXML
 	private GridPane board;
-	@FXML
-	private Button button00;
 	
 //	public final rowIndex = Gridpane.getRowIndex(child);
 //	public final columnIndex = Gridpane.getColumnIndex(child);
 
-	public void changeColor(ActionEvent e) {
-		int rowIndex; // = board.getRowIndex()
-		int columnIndex; //public int columnIndex = Gridpane.getColumnIndex(child);
+	public void changeMines(ActionEvent e) {
+		
+		//int mines = 
+		
+		//int rowIndex; // = board.getRowIndex()
+		//int columnIndex; //public int columnIndex = Gridpane.getColumnIndex(child);
 		
 		//board.node
 		
@@ -60,7 +61,7 @@ public class matrixTenController {
 		
 		
 			//button00.setStyle("-fx-background-color: #ffffff;");
-			button00.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
+			//button00.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
 		
 			//Gridpane.getRowIndex(child)
 			//Gridpane.getColumnIndex(child)
