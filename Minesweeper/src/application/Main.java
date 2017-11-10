@@ -81,6 +81,8 @@ public class Main extends Application {
 	                String a = board.state[rowIndex][columnIndex];
 	                //System.out.println(a);
 	                
+	               
+	                
 	                // loop through all strings in the state 2d array
 	                for (rowIndex = 0; rowIndex < board.state.length; rowIndex++) {
 	                	for (columnIndex = 0; columnIndex < board.state[rowIndex].length; columnIndex++) {

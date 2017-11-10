@@ -2,6 +2,11 @@
 package application;
 import java.util.concurrent.ThreadLocalRandom;
 public class Board {
+	
+	 //create a variable for setFlagged
+    //set the state to flagged status
+    //makes sure the flag doesn't override the state 
+    // only ten flags
 
 	public static void main(String[] args) {
 		
