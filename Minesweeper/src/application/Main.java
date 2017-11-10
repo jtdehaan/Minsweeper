@@ -178,12 +178,14 @@ public class Main extends Application {
 	    	               // 	flagCount--;
 	                		}
 	                	//}
+	                		
+	                		/*
 	                		if(flagCount == 10) {
 	                			System.out.println("10 Flags placed");
 	                		}else if (flagCount == 0) {
 	                			System.out.println("No flags placed");
 	                		}
-	                		
+	                		*/
 	                	
 	                       //board.state[rowIndex][columnIndex] = "F";
 	                       //cell.setText("F");
