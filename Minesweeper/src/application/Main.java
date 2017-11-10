@@ -20,8 +20,8 @@ public class Main extends Application {
 	Button cellButton = new Button();
 	int rowIndex = 0;
  	int columnIndex = 0;
- 	int rowM = 0;
-    int colM = 0;
+ 	//int rowM = 0;
+    //int colM = 0;
  	//int flagCount = 0;
     //private static final String GridPane = null;
  	
