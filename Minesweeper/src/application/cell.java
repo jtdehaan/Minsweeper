@@ -113,8 +113,8 @@ public class cell {
     	if (isMine() == true) {
     		return "B";
     	}
-    	else if (isFlagged() == true) {
-    		return "F"
+    	else if (isFlag() == true) {
+    		return "F";
     	}
     	else if (getAroundMines() == 0) {
     		return " ";
