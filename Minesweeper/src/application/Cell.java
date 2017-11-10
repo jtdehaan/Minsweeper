@@ -1,6 +1,6 @@
 package application;
 
-public class cell {
+public class Cell {
 
 	private boolean mine;
     private boolean mark;
@@ -26,7 +26,7 @@ public class cell {
     */
     
     
-    public cell() {
+    public Cell() {
         this.cover = true;
         this.mark  = false;
         this.mine  = false;

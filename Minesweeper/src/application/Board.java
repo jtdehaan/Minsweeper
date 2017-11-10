@@ -23,15 +23,15 @@ public class Board {
 	}
 	
 	//creates array
-	cell[][] cellArray= new cell[10][10];
-	cell test = new cell();
+	Cell[][] cellArray= new Cell[10][10];
+	Cell test = new Cell();
 	String[][] state = new String[10][10];
 	
 	//sets up cellArray
 	public void setup(){
 		for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-            	cellArray[i][j]= new cell();
+            	cellArray[i][j]= new Cell();
             	//cellArray[i][j] = new cell(i, j, false);
             	state[i][j]="x";
             }}

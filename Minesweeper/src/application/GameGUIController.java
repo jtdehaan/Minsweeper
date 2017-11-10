@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class matrixTenController {
+public class GameGUIController {
 	// Variable Declarations for Labels and Buttons
 	private Label titleLabel;
 	@FXML
