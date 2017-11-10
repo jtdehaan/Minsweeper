@@ -20,6 +20,8 @@ public class Main extends Application {
 	Button cellButton = new Button();
 	int rowIndex = 0;
  	int columnIndex = 0;
+ 	int rowM = 0;
+    int colM = 0;
  	//int flagCount = 0;
     //private static final String GridPane = null;
  	
@@ -167,9 +169,11 @@ public class Main extends Application {
 	                		//for (int f = 0; f < 10; f++) {
 	                		if(e.getClickCount() == 1){
 	                			//System.out.println("Flag Placed");
-	                			
-	                			//board.mark(rowIndex, columnIndex);
+	                			//rowM = child.getRowIndex(cell);
+	        	               // colM = child.getColumnIndex(cell);
+	                			//board.mark(rowM, colM);
 	                			//set "flag"
+	                			//cell.setText("F");
 	                			cell.setStyle("-fx-background-color: #d5f894; -fx-border-color: #000000; -fx-border-width: .75px;");
 	                			
 	                			

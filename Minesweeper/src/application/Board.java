@@ -188,7 +188,7 @@ public class Board {
 	public void mark(int i, int j) {
 		if(cellArray[i][j].getMark()==true){
 			cellArray[i][j].setMark(false);
-			state[i][j]= "x";
+			state[i][j]= "y";
 		} 
 		
 		//else if (cellArray[i][j].setFlag()==true) {
