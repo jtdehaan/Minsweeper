@@ -20,6 +20,7 @@ public class Main extends Application {
 	Button cellButton = new Button();
 	int rowIndex = 0;
  	int columnIndex = 0;
+ 	//int flagCount = 0;
     //private static final String GridPane = null;
  	
 
@@ -157,15 +158,32 @@ public class Main extends Application {
 	    				System.out.println("BOOM!!! You stepped on a mine. Game Over :(");
 	    			}
 	                } else if (click == MouseButton.SECONDARY) {
-	                	
-	                	if(e.getClickCount() == 1){
-	                		System.out.println("Flag Placed");
-	                		cell.setStyle("-fx-background-color: #d5f894; -fx-border-color: #000000; -fx-border-width: .75px;");
-	                		//cell.setText("F");
-	                	}else if(e.getClickCount() == 2) {
-	                		System.out.println("Flag Removed");
-	                		cell.setStyle("");
-	                	}
+	                		
+	                		//for (int f = 0; f < 10; f++) {
+	                		if(e.getClickCount() == 1){
+	                			//System.out.println("Flag Placed");
+	                			
+	                			//set "flag"
+	                			cell.setStyle("-fx-background-color: #d5f894; -fx-border-color: #000000; -fx-border-width: .75px;");
+	                			
+	                			
+	                		//	flagCount++;
+	                		}else if(e.getClickCount() == 2) {
+	    	                	//System.out.println("Flag Removed");
+	                			
+	                			//"unflag"
+	    	                	cell.setStyle("");
+	    	                	
+	    	                	
+	    	               // 	flagCount--;
+	                		}
+	                	//}
+	                		if(flagCount == 10) {
+	                			System.out.println("10 Flags placed");
+	                		}else if (flagCount == 0) {
+	                			System.out.println("No flags placed");
+	                		}
+	                		
 	                	
 	                       //board.state[rowIndex][columnIndex] = "F";
 	                       //cell.setText("F");
