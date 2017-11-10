@@ -189,7 +189,13 @@ public class Board {
 		if(cellArray[i][j].getMark()==true){
 			cellArray[i][j].setMark(false);
 			state[i][j]= "x";
-		} else{
+		} 
+		
+		//else if (cellArray[i][j].setFlag()==true) {
+			
+		//}
+		
+		else{
 			cellArray[i][j].setMark(true);
 			state[i][j]="?";
 		}

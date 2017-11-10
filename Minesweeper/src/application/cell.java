@@ -4,6 +4,7 @@ public class cell {
 
 	private boolean mine;
     private boolean mark;
+    private boolean flag;
     private boolean cover;
     private boolean checked;
     
@@ -29,6 +30,7 @@ public class cell {
         this.cover = true;
         this.mark  = false;
         this.mine  = false;
+        this.flag = false;
         this.value = 0;
     }
     
@@ -59,6 +61,14 @@ public class cell {
 
     public boolean isMine() {
         return this.mine;
+    }
+    
+    public boolean isFlag() {
+    	return this.flag;
+    }
+    
+    public void setFlag(boolean f) {
+    	this.flag = f;
     }
 
     public void setMine(boolean b) {
@@ -102,6 +112,9 @@ public class cell {
     public String returnV(){
     	if (isMine() == true) {
     		return "B";
+    	}
+    	else if (isFlagged() == true) {
+    		return "F"
     	}
     	else if (getAroundMines() == 0) {
     		return " ";
