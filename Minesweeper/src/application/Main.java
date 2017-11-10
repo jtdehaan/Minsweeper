@@ -1,4 +1,3 @@
-
 package application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -12,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.scene.input.*;
 
 
 public class Main extends Application {
@@ -27,7 +27,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
     	try {
 			// set a title for the Window
-			primaryStage.setTitle("Matrix Window");
+			primaryStage.setTitle("Minesweeper");
 			
 			// get an FXML loader and read in the fxml code
 			FXMLLoader loader = new FXMLLoader();
@@ -35,9 +35,10 @@ public class Main extends Application {
 		//	AnchorPane rootPane = new AnchorPane();
 			AnchorPane mainLayout = (AnchorPane) loader. load();
 			
-			//Hard-code in a gridpane
+			//Hard-code a GridPane as a child of the AnchorPane and add it
 		    GridPane child = new GridPane();
 		 	mainLayout.getChildren().addAll(child);
+		 	//Set the position of the GridPane on the AnchorPane
 		 	child.setTranslateX(50);
 		 	child.setTranslateY(120);
 			
@@ -55,24 +56,28 @@ public class Main extends Application {
 			mainLayout.add(myButton2, 1, 1);
 			*/
 		 	
-		 	//error at board.setup();
+		 	//set up the board
 		    board.setup();
 		 	
 		 	//Generate Buttons and set action on button click
-			
 			for (int i = 0; i < 10; i++) {
 	            for (int j = 0; j < 10; j++) {
-	            	//Button cell = new Button(Integer.toString((int)(Math.random() * 2)));
+	            	//Create buttons, set their width & height, and add them to the GridPane
 	            	Button cell = new Button();
 	             	cell.setMinWidth(40.0);
 	                cell.setMaxWidth(40.0);
 	                cell.setMinHeight(40.0);
 	                cell.setMaxHeight(40.0);
-	                cell.setId(j + " " + i);
+	                //cell.setId(j + " " + i);
 	                child.add(cell, j, i);
 	                cell.setAlignment(Pos.CENTER);
 	                
+	                //When a button is clicked, retrieve the coordinates, call the reveal function, and refresh the board
 	                cell.setOnMouseClicked(e -> {
+	                	
+	                MouseButton click = e.getButton();
+	                
+	                if(click==MouseButton.PRIMARY){
 	                //create an accessor method or set style in reveal method
 	                //cell.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
 	                rowIndex = child.getRowIndex(cell);
@@ -81,25 +86,36 @@ public class Main extends Application {
 	                String a = board.state[rowIndex][columnIndex];
 	                //System.out.println(a);
 	                
-	               
-	                
-	                // loop through all strings in the state 2d array
+	                // loop through all strings in the state 2d array to recursively open neighboring empty cells
 	                for (rowIndex = 0; rowIndex < board.state.length; rowIndex++) {
 	                	for (columnIndex = 0; columnIndex < board.state[rowIndex].length; columnIndex++) {
+	                		
 	                		// get the list of nodes from the gridpane
 	                		ObservableList<Node> buttons = child.getChildren();
+	                		
 	                		// loop through all the nodes
 	                		for(Node b : buttons){
-	                			// get the row and col for a node
+	                			
+	                			// get the row and column for a node
 	                			int row = child.getRowIndex(b);
 	                			int col = child.getColumnIndex(b);
 	                			
-	                			// get the string for the node from state by row and col
+	                			// get the string for the node from state by row and column
 	                			String state = board.state[row][col];
+	                			
 	                			// convert the node to button
 	                			Button button = (Button)b;
+	                			
 	                			// set button text to corresponding state
 	                			button.setText(state);
+	                			//button.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 1.5px;");
+	                			
+	                			//if a button contains a mine, restart the board
+	                			 if (a == "B"){
+	         	    				board.setup();
+	         		                button.setText(state);
+	         		                button.setStyle("");
+	         	    			}
 	                		}
 	                	}
 	                }
@@ -129,14 +145,42 @@ public class Main extends Application {
 	                //cell = b1;
 	                //cell.setText(a);
 	            	//cellButton.setText(a);
-	                System.out.println(a);
+	                
+	                //prints the current state of the board
+	                //System.out.println(a);
+	                
+	                
+	                //if a button contains a mine, print game over message
+	                
+	                
 	                if (a == "B"){
-	    				System.out.println("Game Over");
+	    				System.out.println("BOOM!!! You stepped on a mine. Game Over :(");
 	    			}
+	                } else if (click == MouseButton.SECONDARY) {
+	                	
+	                	if(e.getClickCount() == 1){
+	                		System.out.println("Flag Placed");
+	                		cell.setStyle("-fx-background-color: #d5f894; -fx-border-color: #000000; -fx-border-width: .75px;");
+	                		//cell.setText("F");
+	                	}else if(e.getClickCount() == 2) {
+	                		System.out.println("Flag Removed");
+	                		cell.setStyle("");
+	                	}
+	                	
+	                       //board.state[rowIndex][columnIndex] = "F";
+	                       //cell.setText("F");
+	                       //board.mark(rowIndex, columnIndex);
+	                       //cell.setStyle("");
+	                    }
 	                });
 	                cellButton = cell;
 	                String a = board.state[i][j];
 	                cell.setText(a);
+	                
+	                
+	                //onMouseClicked: function(e:MouseEvent):Void {
+	                
+	                
 	            	cellButton.setText(a);
 	            }
 	        }
