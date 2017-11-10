@@ -2,30 +2,15 @@ package application;
 
 public class Cell {
 
+	//set variables for the cell class
 	private boolean mine;
     private boolean mark;
     private boolean flag;
     private boolean cover;
     private boolean checked;
-    
-    private int rowPosition;
-    private int columnPosition;
-
     private int value;
-
-    /*
-    public cell(int x, int y, boolean mine) {
-    	
-    	this.rowPosition = x;
-    	this.columnPosition = y;
-        this.cover = true;
-        this.mark  = false;
-        this.mine  = mine;
-        this.value = 0;
-    }
-    */
     
-    
+    //Cell class constructor
     public Cell() {
         this.cover = true;
         this.mark  = false;
@@ -33,16 +18,8 @@ public class Cell {
         this.flag = false;
         this.value = 0;
     }
-    
-    
-    public int getRowPosition() {
-    	return rowPosition;
-    }
-    
-    public int getColumnPosition() {
-    	return columnPosition;
-    }
 
+    //Getter and setter methods for cell class
     public int getValue() {
         return this.value;
     }
@@ -82,8 +59,6 @@ public class Cell {
     public boolean isCovered() {
         return this.cover;
     }
-    
-    
 
     public boolean isChecked() {
         return this.checked;
@@ -109,6 +84,7 @@ public class Cell {
         return this.value;
     }
     
+    //Returns symbol to be displayed
     public String returnV(){
     	if (isMine() == true) {
     		return "B";

@@ -117,6 +117,11 @@ public class Main extends Application {
 	         		                button.setText(state);
 	         		                button.setStyle("");
 	         	    			}
+	                			 /*
+	                			if (a == "?") {
+	                				board.mark(rowIndex, columnIndex);
+	                			}
+	                			*/
 	                		}
 	                	}
 	                }
@@ -163,6 +168,7 @@ public class Main extends Application {
 	                		if(e.getClickCount() == 1){
 	                			//System.out.println("Flag Placed");
 	                			
+	                			//board.mark(rowIndex, columnIndex);
 	                			//set "flag"
 	                			cell.setStyle("-fx-background-color: #d5f894; -fx-border-color: #000000; -fx-border-width: .75px;");
 	                			
