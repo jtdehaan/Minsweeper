@@ -49,6 +49,7 @@ public class Main extends Application {
 		 	//Generate Buttons and set action on button click
 			for (int i = 0; i < 10; i++) {
 	            for (int j = 0; j < 10; j++) {
+	            	
 	            	//Create buttons, set their width & height, and add them to the GridPane
 	            	Button cell = new Button();
 	             	cell.setMinWidth(40.0);
@@ -71,30 +72,30 @@ public class Main extends Application {
 	                board.reveal(rowIndex, columnIndex);
 	                String a = board.state[rowIndex][columnIndex];
 	                
-	                // loop through all strings in the state 2d array to recursively open neighboring empty cells
+	                //Loop through all strings in the state 2d array to recursively open neighboring empty cells
 	                for (rowIndex = 0; rowIndex < board.state.length; rowIndex++) {
 	                	for (columnIndex = 0; columnIndex < board.state[rowIndex].length; columnIndex++) {
 	                		
-	                		// get the list of nodes from the gridpane
+	                		//Get the list of nodes from the gridpane
 	                		ObservableList<Node> buttons = child.getChildren();
 	                		
-	                		// loop through all the nodes
+	                		//Loop through all the nodes
 	                		for(Node b : buttons){
 	                			
-	                			// get the row and column for a node
+	                			//Get the row and column for a node
 	                			int row = child.getRowIndex(b);
 	                			int col = child.getColumnIndex(b);
 	                			
-	                			// get the string for the node from state by row and column
+	                			//Get the string for the node from state by row and column
 	                			String state = board.state[row][col];
 	                			
-	                			// convert the node to button
+	                			//Convert the node to button
 	                			Button button = (Button)b;
 	                			
-	                			// set button text to corresponding state
+	                			//Set button text to corresponding state
 	                			button.setText(state);
 	                			
-	                			//if a button contains a mine, restart the board
+	                			//If a button contains a mine, restart the board
 	                			 if (a == "B"){
 	         	    				board.setup();
 	         		                button.setText(state);
@@ -104,10 +105,11 @@ public class Main extends Application {
 	                	}
 	                }
 	                
-	                //if a button contains a mine, print game over message
+	                //If a button contains a mine, print game over message
 	                if (a == "B"){
 	    				System.out.println("BOOM!!! You stepped on a mine. Game Over :(");
 	    			}
+	                
 	                //Set actions to be taken if the right mouse button is clicked
 	                } else if (click == MouseButton.SECONDARY) {
 	                		
@@ -115,11 +117,13 @@ public class Main extends Application {
 	                		if(e.getClickCount() == 1){
 	                			cell.setStyle("-fx-background-color: #d5f894; -fx-border-color: #000000; -fx-border-width: .75px;");
 	                		}else if(e.getClickCount() == 2) {
+	                			
 	                			//If the right mouse button is double clicked, unflag the cell
 	    	                	cell.setStyle("");
 	                		}
 	                    }
 	                });
+	                
 	                //Marks each button as it is created so that the board is initially covered
 	                String a = board.state[i][j];
 	                cell.setText(a);
