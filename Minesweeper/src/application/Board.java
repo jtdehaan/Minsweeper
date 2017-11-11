@@ -6,7 +6,7 @@ public class Board {
 	public static void main(String[] args) {
 		
 	}
-	//booleans for won or losss state
+	//booleans for won or loss state
 	boolean win=false;
 	boolean loss =false;
 	//returns win state

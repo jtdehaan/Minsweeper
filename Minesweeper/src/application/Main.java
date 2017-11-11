@@ -18,7 +18,6 @@ public class Main extends Application {
 	
 	//Declare a new instance of the board class
 	Board board= new Board();
-	//Button cellButton = new Button();
 	
 	//variables to store the row and column indexes of the buttons
 	int rowIndex = 0;
@@ -44,7 +43,7 @@ public class Main extends Application {
 		 	child.setTranslateX(50);
 		 	child.setTranslateY(120);
 		 	
-		 	//set up the board
+		 	//Set up the board
 		    board.setup();
 		 	
 		 	//Generate Buttons and set action on button click
@@ -63,7 +62,9 @@ public class Main extends Application {
 	                cell.setOnMouseClicked(e -> {	
 	                MouseButton click = e.getButton();
 	                
+	                //Set actions to be taken when the left mouse button is clicked
 	                if(click==MouseButton.PRIMARY){
+	                	
 	                //get the row and column indexes of the cell that has been pressed
 	                rowIndex = child.getRowIndex(cell);
 	                columnIndex = child.getColumnIndex(cell);
@@ -107,6 +108,7 @@ public class Main extends Application {
 	                if (a == "B"){
 	    				System.out.println("BOOM!!! You stepped on a mine. Game Over :(");
 	    			}
+	                //Set actions to be taken if the right mouse button is clicked
 	                } else if (click == MouseButton.SECONDARY) {
 	                		
 	                		//If the right mouse button is clicked on a cell, flag the cell
